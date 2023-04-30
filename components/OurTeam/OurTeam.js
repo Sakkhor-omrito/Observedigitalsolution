@@ -1,0 +1,154 @@
+import React from 'react';
+import Image from 'next/image';
+import { FaFacebookF } from 'react-icons/fa';
+import { AiFillLinkedin } from 'react-icons/ai';
+import { FiInstagram } from 'react-icons/fi';
+import Sakkhar from '@/assets/image/teams1.jpeg';
+import Setu from '@/assets/Team/myteam_one.jpg';
+import Shiplu from '@/assets/Team/IMG_3440.jpg';
+import Utpal from '@/assets/Team/utpal.jpg';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const OurTeam = () => {
+
+    const settings = {
+        dots: true,
+        arrows:false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        autoplay:true,
+        speed:6000,
+        autoplaySpeed:3000,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true,
+
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                }
+            }
+        ]
+    };
+
+    return (
+        <>
+            <section id="Team_part">
+                <div className="container">
+                    <div className="Team_header">
+                        <h2>Our <span>Team</span></h2>
+                    </div>
+                    <div className="row">
+                        <Slider {...settings}>
+                            <div className="col-lg-4 col-sm-6 py-4  ">
+                                <div className="team_items team_padding">
+                                    <div className="team_img">
+                                        <Image
+                                            className='single_team_img'
+                                            src={Sakkhar}
+                                            alt="Sakkhar"
+                                            width={350}
+                                        />
+                                        <div className="overlay">
+                                            <a href="#"><FaFacebookF color='' className='team_social' /></a>
+                                            <a href="#"><AiFillLinkedin color='' className='team_social' /></a>
+                                            <a href="#"><FiInstagram color='' className='team_social' /></a>
+                                        </div>
+                                    </div>
+                                    <div className="team_content">
+                                        <h3>Sakkhar Majumder</h3>
+                                        <h4>Web Developer</h4>
+                                        <p>I am a proffesional web designer with 1 years experience. I believe only self-confidence will help me reach my goals.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-4 col-sm-6 py-4  ">
+                                <div className="team_items team_padding">
+                                    <div className="team_img">
+                                        <Image
+                                            className='single_team_img'
+                                            src={Setu}
+                                            alt="Setu"
+                                            width={350}
+                                        />
+                                        <div className="overlay">
+                                            <a href="#"><FaFacebookF color='' className='team_social' /></a>
+                                            <a href="#"><AiFillLinkedin color='' className='team_social' /></a>
+                                            <a href="#"><FiInstagram color='' className='team_social' /></a>
+                                        </div>
+                                    </div>
+                                    <div className="team_content">
+                                        <h3>Setu Saha</h3>
+                                        <h4>Wordpress Developer</h4>
+                                        <p>I am a proffesional wordpress developer with 1 years experience. I believe only self-confidence will help me reach my goals.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-4 col-sm-6 py-4  ">
+                                <div className="team_items team_padding">
+                                    <div className="team_img">
+                                        <Image
+                                            className='single_team_img'
+                                            src={Shiplu}
+                                            alt="Shiplu"
+                                            width={350}
+                                        />
+                                        <div className="overlay">
+                                            <a href="#"><FaFacebookF color='' className='team_social' /></a>
+                                            <a href="#"><AiFillLinkedin color='' className='team_social' /></a>
+                                            <a href="#"><FiInstagram color='' className='team_social' /></a>
+                                        </div>
+                                    </div>
+                                    <div className="team_content">
+                                        <h3>Shiplu Roy</h3>
+                                        <h4>UI/UX & Graphic Designer</h4>
+                                        <p>I am a proffesional ui/ux & graphic desinger with 1 years experience.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-4 col-sm-6 py-4 ">
+                                <div className="team_items">
+                                    <div className="team_img">
+                                        <Image
+                                            className='single_team_img'
+                                            src={Utpal}
+                                            alt="Utpal"
+                                            width={350}
+                                        />
+                                        <div className="overlay">
+                                            <a href="https://www.facebook.com/profile.php?id=100015166051609&mibextid=ZbWKwL"><FaFacebookF color='' className='team_social' /></a>
+                                            <a href="https://www.linkedin.com/in/chandrana-utpal-roy-13218423b/"><AiFillLinkedin color='' className='team_social' /></a>
+                                            <a href="https://instagram.com/chandrana_utpal_roy?igshid=YmMyMTA2M2Y="><FiInstagram color='' className='team_social' /></a>
+                                        </div>
+                                    </div>
+                                    <div className="team_content">
+                                        <h3>Utpal Roy</h3>
+                                        <h4>Founder & App Developer</h4>
+                                        <p>I am Utpal Roy and I am a fullstack  developer. I have been working as a developer for 3 years. I have been enjoying every moment of it.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </Slider>
+
+                    </div>
+                </div>
+            </section>
+        </>
+    );
+};
+
+export default OurTeam;
